@@ -1,0 +1,40 @@
+.application-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .application-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .application-box {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .application-box .company-name {
+    font-weight: bold;
+  }
+  
+  .application-box .job-title {
+    font-style: italic;
+  }
+  
+  .application-box .deadline {
+    font-weight: bold;
+  }
+  
+  .application-box.expired {
+    background-color: red;
+  }
+  
