@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "undlien2005.github.io",
+  "homepage": "https://undlien2005.github.io/Lerlingsoknad",
   "private": true,
   "dependencies": {
     "@auth0/auth0-react": "^2.0.0",
