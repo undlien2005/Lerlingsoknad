@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Lerlingsoknad/static/css/main.92bcd5d1.css",
+    "main.js": "/Lerlingsoknad/static/js/main.fd1fc1f0.js",
+    "static/js/787.28cb0dcd.chunk.js": "/Lerlingsoknad/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/Lerlingsoknad/index.html",
+    "main.92bcd5d1.css.map": "/Lerlingsoknad/static/css/main.92bcd5d1.css.map",
+    "main.fd1fc1f0.js.map": "/Lerlingsoknad/static/js/main.fd1fc1f0.js.map",
+    "787.28cb0dcd.chunk.js.map": "/Lerlingsoknad/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.92bcd5d1.css",
+    "static/js/main.fd1fc1f0.js"
+  ]
+}
