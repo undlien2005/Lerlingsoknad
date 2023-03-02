@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import ApplicationList from './ApplicationList';
-import Admin from './admin'; // Import the Admin component
+import Admin from './admin';
 
 function App() {
   const [applications, setApplications] = useState([]);
-  const [searchTerm,] = useState('');
+  const [searchTerm, setSearchTerm] = useState('');
   const [showAdmin, setShowAdmin] = useState(false); // Add a state to track if the admin panel should be shown
+  const [password, setPassword] = useState(''); // Add state for password
 
   useEffect(() => {
     // Function to fetch apprenticeship applications from an API
@@ -23,7 +24,11 @@ function App() {
   );
 
   const handleShowAdmin = () => {
-    setShowAdmin(true);
+    if (password === 'Password') { // Check if password is correct
+      setShowAdmin(true);
+    } else {
+      alert('Incorrect password'); // Show an error message if password is incorrect
+    }
   }
 
   return (
@@ -34,15 +39,20 @@ function App() {
       <main>
         <section id="applications-section">
           {showAdmin ? (
-            <Admin />
+            <Admin applications={applications} setApplications={setApplications} />
           ) : (
             <ApplicationList applications={filteredApplications} />
           )}
         </section>
-        <button onClick={handleShowAdmin}>Add søknad</button>
+        <div id="Adminp">
+        <br></br>
+        <button id="button1" onClick={handleShowAdmin}>Admin</button>
+        <br></br>
+        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} style={{marginLeft: '10px'}} /> {/* Add an input field for the password */}
+        </div>
       </main>
       <footer>
-        
+
       </footer>
     </div>
   );

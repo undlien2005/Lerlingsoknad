@@ -1,40 +1,135 @@
 .application-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.application-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+
+.application-box {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(3px);
+}
+
+.application-box:hover {
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+  transform: scale(1.05);
+}
+
+.application-box .company-name {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.application-box .job-title {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.application-box .deadline {
+  font-weight: bold;
+}
+
+.application-box.expired {
+  background-color: rgb(255, 0, 0);
+  color: white;
+}
+
+.application-expanded-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  padding: 20px;
+  overflow: auto;
+}
+
+.application-expanded-box .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.application-expanded-box .company-name {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.application-expanded-box .job-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.application-expanded-box .description {
+  font-size: 1.5em;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.application-box.expanded {
+  /* eksisterende stiler */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2);
+  z-index: 9999;
+  width: 90%;
+  height: 90%;
+  padding: 20px;
+  /* fjern animasjonen */
+  transition: none;
+  /* legg til bakgrunnsblur */
+  backdrop-filter: blur(10px);
+}
+ul {
+  list-style: none;
+}
+.expired-button {
   
-  .application-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .application-box {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
-    width: 300px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .application-box .company-name {
-    font-weight: bold;
-  }
-  
-  .application-box .job-title {
-    font-style: italic;
-  }
-  
-  .application-box .deadline {
-    font-weight: bold;
-  }
-  
-  .application-box.expired {
-    background-color: red;
-  }
-  
+}
+.app-list {
+  position: relative;
+}
+
+.expired-button {
+  position: fixed;
+  bottom: 30px;
+  right: 10px;
+  width: 150px;
+  height: 60px;
+}
+
+
+#expired-apps-btn {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}

@@ -73,3 +73,16 @@ footer {
   width: 100%;
 }
 
+#button1 {
+  background-color: #eb5202;
+  float: left; /* add float left to the button */
+}
+
+#Adminp {
+  position: absolute;
+  top: 25px;
+  right: 0; /* add right: 0 to align to the right side */
+  display: flex;
+  flex-direction: row; /* add flex-direction to show the button and input bar in a row */
+  align-items: center; /* add align-items to vertically center the content */
+}
