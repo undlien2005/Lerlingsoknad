@@ -170,7 +170,7 @@ function Admin({ applications, setApplications }) {
           </tbody>
         </table>
       ) : (
-        <p>Ingen søknader registrert enda</p>
+        <p>Ingen søknader registrert</p>
       )}
     </div>
   );
