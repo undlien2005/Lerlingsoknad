@@ -132,6 +132,7 @@ function Admin({ applications, setApplications }) {
               )}
             </div>
             <button type="submit">Legg til</button>
+            <br></br>
             <button onClick={() => setShowAddForm(false)}>Avbryt</button>
           </form>
         </div>
@@ -162,7 +163,7 @@ function Admin({ applications, setApplications }) {
                   </a>
                 </td>
                 <td>
-                  <button onClick={() => handleDeleteSubmit(application.id)}>Slett</button>
+                  <button id="buttoncolor" onClick={() => handleDeleteSubmit(application.id)}>Slett</button>
                 </td>
               </tr>
             ))}
